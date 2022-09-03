@@ -6,8 +6,8 @@ function preload(){
   //loadImage de path (camino)
   pathImg=loadImage("path.png")
   //loadAnimation de boy (niño)
-  boyImg=loadAnimation("jake4.PNG","jake1.png","jake2.png","jake3.png")
- path.y=path.height/4
+  boyImg=loadAnimation("Runner-1.png","Runner-2.png")
+ 
 }
 
 function setup(){
@@ -24,7 +24,7 @@ path.velocityY=5
 boy=createSprite(200,400,50,50)
 //agregar animación para boy
 boy.addAnimation("boy",boyImg)
-boy.scale=0.8;
+boy.scale=0.08;
   
 // crear  left Boundary (límite izquierdo)
 leftBoundary=createSprite(0,0,100,800);
@@ -48,7 +48,7 @@ function draw() {
   
   //código para reiniciar el fondo
  if (path.y>400) {
-  path.y=height/4
+  path.y=height/4;
  }
   
   drawSprites();
